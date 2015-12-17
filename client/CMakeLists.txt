@@ -18,9 +18,14 @@ include_directories(
 
 set(SRCS main.cpp qfmmainwindow.cpp)
 set(HDRS qfmmainwindow.h)
+set(FORMS qfmmainwindow.ui)
 
 # Tell CMake to create the qfm executable
-add_executable(qfm WIN32 ${SRCS})
+if(win32)
+    add_executable(qfm WIN32 ${SRCS})
+else()
+    add_executable(qfm ${SRCS})
+endif()
 
 # Use the Widgets module from Qt 5.
 target_link_libraries(qfm Qt5::Widgets)
