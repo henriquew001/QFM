@@ -1,0 +1,35 @@
+\documentclass[a4paper, 10pt, oneside]{book}
+\usepackage[top=25mm, left=25mm, right=20mm, bottom=25mm]{geometry}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{pstricks}
+\usepackage{pst-node} % For connecting of onformation
+\usepackage{auto-pst-pdf}
+
+\newcommand{\DocumentVersion}{Version 0.01}
+\newcommand{\DocumentName}{QFM Screen Sequence}
+
+% Header definitions
+\pagestyle{fancy} % Use fancy style
+%\renewcommand{\headheight}{15.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhf{}
+\fancyhead[C]{\DocumentName}
+\fancyhead[R]{\DocumentVersion}
+\fancyhead[L]{-----Draft-----}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+%\frontmatter
+\setcounter{chapter}{0}
+\input{Titlepage.tex}
+\tableofcontents \newpage
+%\mainmatter
+\chapter{Frame sequence} \newpage
+\input{StartPage.tex}
+
+\end{document}

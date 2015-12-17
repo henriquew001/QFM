@@ -1,0 +1,9 @@
+\centering
+\begin{psmatrix}[rowsep=.5,colsep=.5]	
+\rput[c](0,0){\rnode{Start}{\pscirclebox{\hyperlink {meinstart}{Start}}}}
+\rput[c](0,-4){\rnode{StartScreen}{\includegraphics[scale=0.35]{Screens/StartScreen.png}}}
+\rput[c](-7,-4){\rnode{StartQuit}{\pscirclebox{Quit}}}
+\rput[c](4,-8){\pscirclebox{Loadbox}}
+\end{psmatrix}
+\ncline{->}{Start}{StartScreen}
+\ncline[arcangle=-15]{<-}{StartQuit}{StartScreen}\naput[nrot=:U]{Quit button pressed}
